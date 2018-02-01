@@ -6,9 +6,12 @@ class Edit extends Component {
 
     state = {
         _id: '',
-        title: '',
-        album: '',
-        comments: ''
+        reviewTitle: '',
+        albumTitle: '',
+        comments: '',
+        imageUrl:'',
+        reviewBody:''
+
     }
 
     componentDidMount() {
@@ -18,10 +21,11 @@ class Edit extends Component {
                 console.log(response)
                 this.setState({
                     _id: response.data._id,
-                    title: response.data.title,
-                    album: response.data.album,
+                    reviewTitle: response.data.reviewTitle,
+                    albumTitle: response.data.albumTitle,
                     comments: response.data.comments, 
-                    imageUrl: response.data.imageUrl
+                    imageUrl: response.data.imageUrl,
+                    reviewBody:response.data.reviewBody
                 })
             })
     }
@@ -53,27 +57,27 @@ class Edit extends Component {
             <div className="Edit">
                 <div className="card">
                     <div className="card-body">
-                        <h2 className="card-title">Edit: {this.state.title}</h2>
+                        <h2 className="card-title">Edit: {this.state.reviewTitle}</h2>
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
-                                <label htmlFor="exampleFormControlInput1">Title</label>
+                                <label htmlFor="exampleFormControlInput1">Review Title</label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     id="exampleFormControlInput1"
-                                    name="title"
-                                    value={this.state.title}
+                                    name="reviewTitle"
+                                    value={this.state.reviewTitle}
                                     onChange={this.handleInput}
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="exampleFormControlInput1">Album Name</label>
+                                <label htmlFor="exampleFormControlInput1">Album Title</label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     id="exampleFormControlInput1"
-                                    name="album"
-                                    value={this.state.album}
+                                    name="albumTitle"
+                                    value={this.state.albumTitle}
                                     onChange={this.handleInput}
                                 />
                             </div>
@@ -88,6 +92,20 @@ class Edit extends Component {
                                     onChange={this.handleInput}
                                 />
                             </div>
+
+                            <div className="form-group">
+                                <label htmlFor="exampleFormControlInput1">Review</label>
+                                <textarea
+                                    rows="3"
+                                    className="form-control"
+                                    id="exampleFormControlInput1"
+                                    name="reviewBody"
+                                    value={this.state.reviewBody}
+                                    onChange={this.handleInput}
+                                    >
+                                </textarea>
+                            </div>
+
                             <button type="submit" className="btn btn-info mx-1">Update</button>
                             <Link to="/" className="btn btn-danger mx-1">Cancel</Link>
                         </form>

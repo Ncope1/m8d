@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom'
 
 class Create extends Component {
     state = {
-        title: '',
-        album: '',
-        imageUrl: ''
+        reviewTitle: '',
+        albumTitle: '',
+        imageUrl: '',
+        reviewBody: ''
     }
 
     handleInput = (e) => {
@@ -44,19 +45,19 @@ class Create extends Component {
                                     type="text"
                                     className="form-control"
                                     id="exampleFormControlInput1"
-                                    name="title"
-                                    value={this.state.title}
+                                    name="reviewTitle"
+                                    value={this.state.reviewTitle}
                                     onChange={this.handleInput}
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="exampleFormControlInput1">Album</label>
+                                <label htmlFor="exampleFormControlInput1">Album Title</label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     id="exampleFormControlInput1"
-                                    name="album"
-                                    value={this.state.album}
+                                    name="albumTitle"
+                                    value={this.state.albumTitle}
                                     onChange={this.handleInput}
                                 />
                             </div>
@@ -72,6 +73,19 @@ class Create extends Component {
                                 />
                             </div>
                             
+                            <div className="form-group">
+                                <label htmlFor="exampleFormControlInput1">Review</label>
+                                <textarea
+                                    rows="3"
+                                    className="form-control"
+                                    id="exampleFormControlInput1"
+                                    name="reviewBody"
+                                    value={this.state.reviewBody}
+                                    onChange={this.handleInput}
+                                    >
+                                </textarea>
+                            </div>
+
                             <button type="submit" className="btn btn-info mx-1">Create</button>
                             <Link to="/" className="btn btn-danger mx-1">Cancel</Link>
                         </form>
