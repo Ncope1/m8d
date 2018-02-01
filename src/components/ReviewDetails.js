@@ -7,18 +7,17 @@ class ReviewDetails extends Component {
 
     state = {
         review: {},
-        comments: [
-            {comment: "This shit bumps!", author: "Anonymous"}
-        ]
+        comments: []
     }
 
     componentDidMount() {
         console.log(this.props.match.params._id)
         getReviewById(this.props.match.params._id)
             .then((response) => {
-                console.log(response)
+                // console.log(response)
                 this.setState({
-                    review: response.data
+                    review: response.data,
+                    comments: response.data.comments
                 })
                 console.log(this.state.review)
             })
