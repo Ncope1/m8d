@@ -6,7 +6,7 @@ class Create extends Component {
     state = {
         title: '',
         album: '',
-        comments: ''
+        imageUrl: ''
     }
 
     handleInput = (e) => {
@@ -61,13 +61,13 @@ class Create extends Component {
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="exampleFormControlInput1"><span className="required">*</span>Comments</label>
+                                <label htmlFor="exampleFormControlInput1">Image Url</label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     id="exampleFormControlInput1"
-                                    name="comments"
-                                    value={this.state.comments}
+                                    name="imageUrl"
+                                    value={this.state.imageUrl}
                                     onChange={this.handleInput}
                                 />
                             </div>
