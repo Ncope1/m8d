@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const CLIENT_URL = 'http://localhost:8080/reviews'
+// const CLIENT_URL = 'http://localhost:8080/reviews'
+const CLIENT_URL = 'https://project-3-server-final.herokuapp.com/reviews'
 
 
 // get all albums
