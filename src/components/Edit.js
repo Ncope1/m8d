@@ -20,7 +20,8 @@ class Edit extends Component {
                     _id: response.data._id,
                     title: response.data.title,
                     album: response.data.album,
-                    comments: response.data.comments
+                    comments: response.data.comments, 
+                    imageUrl: response.data.imageUrl
                 })
             })
     }
@@ -55,7 +56,7 @@ class Edit extends Component {
                         <h2 className="card-title">Edit: {this.state.title}</h2>
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
-                                <label htmlFor="exampleFormControlInput1"><span className="required">*</span>Title</label>
+                                <label htmlFor="exampleFormControlInput1">Title</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -66,7 +67,7 @@ class Edit extends Component {
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="exampleFormControlInput1"><span className="required">*</span>Title</label>
+                                <label htmlFor="exampleFormControlInput1">Album Name</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -77,13 +78,13 @@ class Edit extends Component {
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="exampleFormControlInput1"><span className="required">*</span>Title</label>
+                                <label htmlFor="exampleFormControlInput1">Image Url</label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     id="exampleFormControlInput1"
-                                    name="comments"
-                                    value={this.state.comments}
+                                    name="imageUrl"
+                                    value={this.state.imageUrl}
                                     onChange={this.handleInput}
                                 />
                             </div>

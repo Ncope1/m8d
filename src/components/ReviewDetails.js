@@ -12,6 +12,7 @@ class ReviewDetails extends Component {
         console.log(this.props.match.params._id)
         getReviewById(this.props.match.params._id)
             .then((response) => {
+                console.log(response)
                 this.setState({
                     review: response.data
                 })
@@ -34,7 +35,8 @@ class ReviewDetails extends Component {
             <div>
                 <h1>{this.state.review.title}</h1>
                 <p>{this.state.review.album}</p>
-                <p>{this.state.review.comments}</p>
+                <img src={this.state.review.imageUrl} className="img-fluid"/>
+                {/* <p>{this.state.review.comments}</p> */}
                 <Link to={editLink} className="btn btn-secondary btn-sm mx-1">
                     Edit&nbsp;<i className="fa fa-pencil" aria-hidden="true"></i>
                 </Link>

@@ -11,8 +11,15 @@ class DashBoardContainer extends Component {
             return (
                 <div className="card card-shadow m-3" key={index}>
                     <div className="card-body">
-                        <Link to={detailsPath}>{review.title}</Link>
-                        <p>{review.album}</p>
+                        <div className="row">
+                            <div className="col-md-4">
+                                <img src={review.imageUrl} className="img-fluid"/>
+                            </div>
+                            <div className="col-md-8">
+                                <Link to={detailsPath}>{review.title}</Link>
+                                <p>{review.album}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )
