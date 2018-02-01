@@ -16,6 +16,10 @@ export const createReview = (review) => {
     return axios.post(`${CLIENT_URL}/`, review)
 }
 
+export const createComment = (id, post) => {
+    return axios.post(`${CLIENT_URL}/add-comments/` + id, post)
+}
+
 export const updateReview = (id, update) => {
     return axios.put(`${CLIENT_URL}/` + id, update)
 }
