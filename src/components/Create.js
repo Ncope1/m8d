@@ -39,7 +39,7 @@ class Create extends Component {
                         <h2 className="card-title">Add New Review</h2>
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
-                                <label htmlFor="exampleFormControlInput1"><span className="required">*</span>Review Title</label>
+                                <label htmlFor="exampleFormControlInput1">Review Title</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -50,7 +50,7 @@ class Create extends Component {
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="exampleFormControlInput1"><span className="required">*</span>Album</label>
+                                <label htmlFor="exampleFormControlInput1">Album</label>
                                 <input
                                     type="text"
                                     className="form-control"
