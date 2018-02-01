@@ -6,23 +6,23 @@ class Edit extends Component {
 
     state = {
         _id: '',
-        title: '', 
-        album: '', 
-        comments:''
+        title: '',
+        album: '',
+        comments: ''
     }
 
     componentDidMount() {
         console.log(this.props.match.params._id)
         getReviewById(this.props.match.params._id)
-        .then((response) => {
-            console.log(response)
-            this.setState({
-                _id: response.data._id,
-                title: response.data.title,
-                album: response.data.album,
-                comments: response.data.comments,
+            .then((response) => {
+                console.log(response)
+                this.setState({
+                    _id: response.data._id,
+                    title: response.data.title,
+                    album: response.data.album,
+                    comments: response.data.comments
+                })
             })
-        })
     }
 
     handleInput = (e) => {
@@ -41,7 +41,7 @@ class Edit extends Component {
         updateReview(this.state._id, this.state)
             .then((response) => {
                 console.log(response)
-                window.location.href='/'
+                window.location.href = '/'
             })
             .catch(err => console.log(err))
     }
@@ -49,8 +49,11 @@ class Edit extends Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
+            <div className="Edit">
+                <div className="card">
+                    <div className="card-body">
+                        <h2 className="card-title">Edit: {this.state.title}</h2>
+                        <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
                                 <label htmlFor="exampleFormControlInput1"><span className="required">*</span>Title</label>
                                 <input
@@ -87,6 +90,8 @@ class Edit extends Component {
                             <button type="submit" className="btn btn-info mx-1">Update</button>
                             <Link to="/" className="btn btn-danger mx-1">Cancel</Link>
                         </form>
+                    </div>
+                </div>
             </div>
         );
     }

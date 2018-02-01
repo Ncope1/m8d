@@ -36,7 +36,7 @@ class Create extends Component {
             <div className="Create container">
             <div className="card">
             <div className="card-body">
-                        <h2 className="card-title">New Review</h2>
+                        <h2 className="card-title">Add New Review</h2>
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
                                 <label htmlFor="exampleFormControlInput1"><span className="required">*</span>Review Title</label>
