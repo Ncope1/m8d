@@ -35,11 +35,12 @@ class ReviewDetails extends Component {
             <div>
                 <h1>{this.state.review.reviewTitle}</h1>
                 <p>{this.state.review.albumTitle}</p>
-                <img src={this.state.review.imageUrl} className="img-fluid" alt={this.state.albumTitle}/>
-                <Link to={editLink} className="btn btn-secondary btn-sm mx-1">
+                <img src={this.state.review.imageUrl} className="img-fluid" alt={this.state.albumTitle} />
+                <p>{this.state.review.reviewBody}</p>
+                <Link to={editLink} className="btn btn-secondary mx-1">
                     Edit&nbsp;<i className="fa fa-pencil" aria-hidden="true"></i>
                 </Link>
-                <button onClick={(e) => this.deleteReviewById(this.state.review._id)} className="btn btn-danger btn-sm mx-1">
+                <button onClick={(e) => this.deleteReviewById(this.state.review._id)} className="btn btn-danger mx-1">
                     Delete&nbsp;<i className="fa fa-trash" aria-hidden="true"></i>
                 </button>
             </div>
