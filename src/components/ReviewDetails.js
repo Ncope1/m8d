@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { getReviewById, deleteReviewById } from '../services/reviews'
 import { Link } from 'react-router-dom'
+import Comment from './Comment'
 
 class ReviewDetails extends Component {
 
     state = {
-        review: {}
+        review: {},
+        comments: [
+            {comment: "This shit bumps!", author: "Anonymous"}
+        ]
     }
 
     componentDidMount() {
@@ -30,7 +34,9 @@ class ReviewDetails extends Component {
 
     render() {
         let editLink = `/edit/${this.state.review._id}`
-
+            let comment = this.state.comments.map((comment, index) => {
+                return <Comment comment={comment} key={index}/>
+            })
         return (
             <div>
                 <h1>{this.state.review.reviewTitle}</h1>
@@ -43,6 +49,7 @@ class ReviewDetails extends Component {
                 <button onClick={(e) => this.deleteReviewById(this.state.review._id)} className="btn btn-danger mx-1">
                     Delete&nbsp;<i className="fa fa-trash" aria-hidden="true"></i>
                 </button>
+                {comment}
             </div>
         )
     }
