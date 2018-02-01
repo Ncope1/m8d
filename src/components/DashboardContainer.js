@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { CSSTransitionGroup } from 'react-transition-group'
 
-
 class DashBoardContainer extends Component {
     render() {
 
@@ -13,11 +12,11 @@ class DashBoardContainer extends Component {
                     <div className="card-body">
                         <div className="row">
                             <div className="col-md-4">
-                                <img src={review.imageUrl} className="img-fluid"/>
+                                <img src={review.imageUrl} className="img-fluid" alt={review.albumTitle}/>
                             </div>
                             <div className="col-md-8">
-                                <Link to={detailsPath}>{review.title}</Link>
-                                <p>{review.album}</p>
+                                <Link to={detailsPath}>{review.reviewTitle}</Link>
+                                <p>{review.albumTitle}</p>
                             </div>
                         </div>
                     </div>

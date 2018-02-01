@@ -33,10 +33,9 @@ class ReviewDetails extends Component {
 
         return (
             <div>
-                <h1>{this.state.review.title}</h1>
-                <p>{this.state.review.album}</p>
-                <img src={this.state.review.imageUrl} className="img-fluid"/>
-                {/* <p>{this.state.review.comments}</p> */}
+                <h1>{this.state.review.reviewTitle}</h1>
+                <p>{this.state.review.albumTitle}</p>
+                <img src={this.state.review.imageUrl} className="img-fluid" alt={this.state.albumTitle}/>
                 <Link to={editLink} className="btn btn-secondary btn-sm mx-1">
                     Edit&nbsp;<i className="fa fa-pencil" aria-hidden="true"></i>
                 </Link>
