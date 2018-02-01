@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { CSSTransitionGroup } from 'react-transition-group'
+
 
 class DashBoardContainer extends Component {
     render() {
@@ -19,7 +21,12 @@ class DashBoardContainer extends Component {
 
         return (
             <div className="DashboardContainer">
-                {review}
+                <CSSTransitionGroup
+                    transitionName="example"
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={300}>
+                    {review}
+                </CSSTransitionGroup>
             </div>
         );
     }
