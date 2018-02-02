@@ -6,7 +6,7 @@ class Navbar extends Component {
         return (
             <div className="Navbar">
                 <nav className="navbar navbar-shadow navbar-dark fixed-top bg-dark">
-                    <Link to="/" className="navbar-brand">Album Reviews <i className="fas fa-comments"></i></Link>
+                    <Link to="/" className="navbar-brand">The Miseducation of 808s Dookie <i className="fas fa-comments"></i></Link>
                     <ul className="nav">
                         <li className="nav-item">
                             <NavLink exact={true} activeClassName="is-active" to="/browse" className="nav-link">Browse</NavLink>
