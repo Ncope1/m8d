@@ -19,5 +19,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://probstin.github.io/md8"
+  "homepage": "https://probstin.github.io/m8d"
 }
