@@ -1,5 +1,4 @@
 body {
-    background-color: #efefef;
     padding-top: 4.5rem;
 }
 
@@ -9,6 +8,14 @@ main {
 
 .navbar-brand {
     font-size: 26px;
+}
+
+.nav-link {
+  color: #898989;
+}
+
+.is-active {
+  color: #fff
 }
 
 .navbar-shadow {

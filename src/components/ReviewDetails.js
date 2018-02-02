@@ -91,7 +91,6 @@ class ReviewDetails extends Component {
                         <img src={this.state.review.imageUrl} className="img-fluid xy-shadow" alt={this.state.albumTitle} />
                     </div>
                     <div className="col-md-7">
-                        <h4>My Thoughts...</h4>
                         <p>{this.state.review.reviewBody}</p>
                     </div>
                 </div>
