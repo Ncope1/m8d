@@ -86,7 +86,7 @@ class Create extends Component {
                                 </textarea>
                             </div>
 
-                            <button type="submit" className="btn btn-info mx-1">Create</button>
+                            <button type="submit" className="btn btn-dark mx-1">Create</button>
                             <Link to="/" className="btn btn-danger mx-1">Cancel</Link>
                         </form>
                         </div>

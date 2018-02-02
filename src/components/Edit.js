@@ -106,7 +106,7 @@ class Edit extends Component {
                                 </textarea>
                             </div>
 
-                            <button type="submit" className="btn btn-info mx-1">Update</button>
+                            <button type="submit" className="btn btn-dark mx-1">Update</button>
                             <Link to="/" className="btn btn-danger mx-1">Cancel</Link>
                         </form>
                     </div>

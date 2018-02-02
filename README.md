@@ -4,7 +4,8 @@
 This application is for music lovers that appreciate listening to an artist’s or band’s entire album and getting a full perspective for the audible impact the artist or band was going for.  A music lover can then write a review of their thoughts on the album and post a picture of the album cover with their review.  Other music lovers can read their review, decide whether or not to listen to the album, and leave comments on the review that they read.  They can then post their own review of the album or create a review for a different album.
 
 ## Brief Example
-This a link to a screen shot of The Miseducation of 808s Dookie in the Chrome Browser:
+This a screen shot of The Miseducation of 808s Dookie in the Chrome Browser:
+![alt text](https://github.com/probstin/project_3_client_final/blob/master/planning/M8D%20Dashboard.png?raw=true "project3 screenshot")
 
 ## List of Features
 This project’s back-end has full CRUD functionality and two models.  We are using Spotify’s API for a search feature.  React was used on the front-end and leverages the back-end API utilizing RESTful CRUD and Axios.  The back-end was deployed to Heroku and the front-end was deployed to GitHub Pages.  

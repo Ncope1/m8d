@@ -10,23 +10,23 @@ class DashBoardContainer extends Component {
             let detailsPath = `/m8d/reviews/${review._id}`
             let reviewBody = review.reviewBody.substring(0, 350)
             return (
-                <div className="card card-shadow m-3" key={index}>
-                    <div className="card-body">
-                        <div className="row">
-                            <div className="col-md-3">
-                                <Link to={detailsPath}>
-                                    <img src={review.imageUrl} height="100%" width="100%" className="img-fluid" alt={review.albumTitle} />
-                                </Link>
-                            </div>
-                            <div className="col-md-9">
-                                <Link to={detailsPath}><h2>{review.reviewTitle}</h2></Link>
-                                <h4>{review.albumTitle}</h4>
-                                <hr />
-                                <p>{reviewBody}</p>
-                            </div>
+                <div>
+                    <div className="row" key={index}>
+                        <div className="col-md-3">
+                            <Link to={detailsPath}>
+                                <img src={review.imageUrl} height="100%" width="100%" className="img-fluid" alt={review.albumTitle} />
+                            </Link>
+                        </div>
+                        <div className="col-md-9">
+                            <Link to={detailsPath}><h2 className="card-title">{review.reviewTitle}</h2></Link>
+                            <h4>{review.albumTitle}</h4>
+                            <p>{reviewBody}</p>
                         </div>
                     </div>
+                    <hr />
                 </div>
+
+
             )
         })
 
