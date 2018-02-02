@@ -9,7 +9,13 @@ class Navbar extends Component {
                     <Link to="/" className="navbar-brand">Album Reviews <i className="fas fa-comments"></i></Link>
                     <ul className="nav">
                         <li className="nav-item">
-                            <NavLink exact={true} activeClassName="is-active" to="/create" className="btn btn-dark">Create New</NavLink>
+                            <NavLink exact={true} activeClassName="is-active" to="/browse" className="nav-link">Browse</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink exact={true} activeClassName="is-active" to="/reviews" className="nav-link">Reviews</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink exact={true} activeClassName="is-active" to="/create" className="btn btn-dark">Create Review</NavLink>
                         </li>
                     </ul>
                 </nav>
