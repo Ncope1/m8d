@@ -49,7 +49,7 @@ class AlbumDetails extends Component {
                             <img src={this.state.image} className="img-fluid xy-shadow" alt={this.state.album} />
                         </div>
                         <div className="col-md-7 my-1">
-                            <div className="list-group track-list xy-shadow">
+                            <div className="list-group track-list">
                                 {track}
                             </div>
                         </div>
