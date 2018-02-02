@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import SearchBar from './SearchBar'
-import Results from './Results'
 import { getAlbumByTitle, getNewReleases } from '../services/albums'
 import { Link } from 'react-router-dom'
 

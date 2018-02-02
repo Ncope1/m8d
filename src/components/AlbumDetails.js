@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getComments, getAlbumById } from '../services/albums'
+import { getAlbumById } from '../services/albums'
 
 class AlbumDetails extends Component {
 

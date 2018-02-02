@@ -69,40 +69,52 @@ class ReviewDetails extends Component {
             return <Comment comment={comment} key={index} />
         })
         return (
-            <div>
-                <h1>{this.state.review.reviewTitle}</h1>
-                <p>{this.state.review.albumTitle}</p>
-                <img src={this.state.review.imageUrl} className="img-fluid" alt={this.state.albumTitle} />
-                <p>{this.state.review.reviewBody}</p>
-                <Link to={editLink} className="btn btn-secondary mx-1">
-                    Edit&nbsp;<i className="fa fa-pencil" aria-hidden="true"></i>
-                </Link>
-                <button onClick={(e) => this.deleteReviewById(this.state.review._id)} className="btn btn-danger mx-1">
-                    Delete&nbsp;<i className="fa fa-trash" aria-hidden="true"></i>
-                </button>
-
-                <hr />
-
-                <div className="input-group mb-3">
-                    <form onSubmit={this.handleSubmit}>
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Comment"
-                            aria-label="Comment"
-                            aria-describedby="basic-addon2"
-                            name="comment"
-                            value={this.state.comment}
-                            onChange={this.handleInput}
-                        />
-                        <div className="input-group-append">
-                            <button className="btn btn-secondary" type="submit">Post</button>
+            <div className="ReviewDetails">
+                <div className="row">
+                    <div className="col-md-9">
+                        <h1>{this.state.review.reviewTitle}</h1>
+                    </div>
+                    <div className="col-md-3">
+                        <div className="float-right">
+                            <Link to={editLink} className="btn btn-secondary mx-1">
+                                Edit <i className="fas fa-pencil-alt"></i>
+                            </Link>
+                            <button onClick={(e) => this.deleteReviewById(this.state.review._id)} className="btn btn-danger mx-1">
+                                Delete <i className="fas fa-trash-alt"></i>
+                            </button>
                         </div>
-                    </form>
+                    </div>
                 </div>
-
+                <hr />
+                <div className="row">
+                    <div className="col-md-5">
+                        <img src={this.state.review.imageUrl} className="img-fluid xy-shadow" alt={this.state.albumTitle} />
+                    </div>
+                    <div className="col-md-7">
+                        <h4>My Thoughts...</h4>
+                        <p>{this.state.review.reviewBody}</p>
+                    </div>
+                </div>
+                <div className="comments my-4">
+                <h4>Comments</h4>
+                <hr />
+                <div className="input-group xy-shadow mb-3">
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Add a comment..."
+                        aria-label="Comment"
+                        aria-describedby="basic-addon2"
+                        name="comment"
+                        value={this.state.comment}
+                        onChange={this.handleInput}
+                    />
+                    <div className="input-group-append">
+                        <button className="btn btn-secondary" type="button" onClick={this.handleSubmit}>Post</button>
+                    </div>
+                </div>
                 {comment}
-
+                </div>
             </div>
         )
     }
