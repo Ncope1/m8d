@@ -19,10 +19,10 @@ This project can be viewed in your browser by going to the website:
 We used Spotify’s API.  We also used Random Name Generator for JavaScript (c) by Thomas Konings.  The Express API Boilerplate was created by Justin Probst.
 
 ## Authors
-Justin Probst 
-Natalee Cope
-Shelley Schoppert
-Rashad Hammonds
+* Justin Probst 
+* Natalee Cope
+* Shelley Schoppert
+* Rashad Hammonds
 
 ## Acknowledgements
 We would like to thank Ali Spittel and James Reichard for taking the time to help us think through our process and code. We would also like to thank them for the time they took to help walk us through a few things so we could make our application function like we wanted it to.  
