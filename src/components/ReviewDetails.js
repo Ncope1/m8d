@@ -76,7 +76,7 @@ class ReviewDetails extends Component {
                     </div>
                     <div className="col-md-3">
                         <div className="float-right">
-                            <Link to={editLink} className="btn btn-secondary mx-1">
+                            <Link to={editLink} className="btn btn-dark mx-1">
                                 Edit <i className="fas fa-pencil-alt"></i>
                             </Link>
                             <button onClick={(e) => this.deleteReviewById(this.state.review._id)} className="btn btn-danger mx-1">
@@ -109,7 +109,7 @@ class ReviewDetails extends Component {
                         onChange={this.handleInput}
                     />
                     <div className="input-group-append">
-                        <button className="btn btn-secondary" type="button" onClick={this.handleSubmit}>Post</button>
+                        <button className="btn btn-dark" type="button" onClick={this.handleSubmit}>Post Comment</button>
                     </div>
                 </div>
                 {comment}

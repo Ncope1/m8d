@@ -55,7 +55,7 @@ class Edit extends Component {
     render() {
         return (
             <div className="Edit">
-                <div className="card">
+                <div className="card xy-shadow" >
                     <div className="card-body">
                         <h2 className="card-title">Edit: {this.state.reviewTitle}</h2>
                         <form onSubmit={this.handleSubmit}>

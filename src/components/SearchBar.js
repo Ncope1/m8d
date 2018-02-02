@@ -19,7 +19,7 @@ class Search extends Component {
                 <div className="input-group xy-shadow">
                     <input type="text" className="form-control" placeholder="Search for an Album" name="query" value={this.props.query} onChange={this.handleSearchInput} />
                     <div className="input-group-append">
-                        <button type="button" className="btn btn-success" onClick={this.onSubmitQuery}>Search</button>
+                        <button type="button" className="btn btn-dark" onClick={this.onSubmitQuery}>Search</button>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 body {
     padding-top: 4.5rem;
+    font-family: 'Oswald', sans-serif;
 }
 
 main {
@@ -8,6 +9,7 @@ main {
 
 .navbar-brand {
     font-size: 26px;
+    font-family: 'Rammetto One', cursive;
 }
 
 .nav-link {
@@ -32,6 +34,10 @@ main {
 
 .card {
     border-radius: 0;
+}
+
+.card-title {
+    color: #0b0000;
 }
 
 .card-shadow {
