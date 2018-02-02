@@ -14,7 +14,7 @@ This project’s back-end has full CRUD functionality and two models.  We are us
 Express, Mongoose, MongoDB, JSON, Heroku, mLab, React, Axios, node-spotify-api npm package, and Bootstrap were all used to complete this project.
 
 ## Installation Instructions
-This project can be viewed in your browser by going to the website: 
+This project can be viewed in your browser by going to the website: https://github.com/probstin/m8d
 
 ## Contributions
 We used Spotify’s API.  We also used Random Name Generator for JavaScript (c) by Thomas Konings.  The Express API Boilerplate was created by Justin Probst.
