@@ -122,9 +122,12 @@ Consider whether or not you want to introduce a barrier to entry for your applic
 
 [Here](https://git.generalassemb.ly/ga-wdi-lessons/express-passport) is a GA lesson explaining how auth can be implemented in an Express application.
 
-#### Maps
-
-If your application uses physical locations, consider adding a map ***as a bonus feature*** to your application. [Check out this Google Maps component library](https://tomchentw.github.io/react-google-maps/).
 ---
-#### ERD
-![alt text](/Users/Ladybug/wdi/projects/project3.2/project_3_server_final/planning/Prject3_Wireframe_1.jpg "Group1 ERD")
+#### ERD & WIREFRAMING
+![alt text](https://github.com/probstin/project_3_server_final/blob/master/planning/Group1_Project3_ERD_Wireframe.JPG?raw=true "ERD & Wireframing")
+
+![alt text](https://github.com/probstin/project_3_server_final/blob/master/planning/Prject3_MVP%20Roadmap.JPG?raw=true "MVP Roadmap")
+
+
+
+
