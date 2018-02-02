@@ -5,7 +5,7 @@ This application is for music lovers that appreciate listening to an artist’s 
 
 ## Brief Example
 This a screen shot of The Miseducation of 808s Dookie in the Chrome Browser:
-![alt text](/Users/socialimpact/WDI/projects/sound-of-movies/project_3_client_final/planning/M8D Dashboard.png)
+![alt text](https://github.com/probstin/project_3_client_final/blob/master/planning/M8D%20Dashboard.png?raw=true "project3 screenshot")
 
 ## List of Features
 This project’s back-end has full CRUD functionality and two models.  We are using Spotify’s API for a search feature.  React was used on the front-end and leverages the back-end API utilizing RESTful CRUD and Axios.  The back-end was deployed to Heroku and the front-end was deployed to GitHub Pages.  
