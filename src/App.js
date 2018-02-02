@@ -30,13 +30,13 @@ class App extends Component {
         <Navbar />
         <main className="container">
           <Switch>
-            <Route exact path="/browse" render={() => (<Browse />)} />
-            <Route exact path="/browse/details/:id" render={(props) => (<AlbumDetails {...props}/>)} />
-            <Route exact path="/reviews" render={() => (<Dashboard reviews={this.state.reviews} />)} />
-            <Route exact path="/reviews/:_id" render={(props) => (<ReviewDetails {...props} />)} />
-            <Route path="/edit/:_id" render={(props) => (<Edit {...props} />)} />
-            <Route path="/create" component={Create} />
-            <Route path="/*" render={() => (<Redirect to="/browse" />)} />
+            <Route exact path="/m8d/browse" render={() => (<Browse />)} />
+            <Route exact path="/m8d/browse/details/:id" render={(props) => (<AlbumDetails {...props}/>)} />
+            <Route exact path="/m8d/reviews" render={() => (<Dashboard reviews={this.state.reviews} />)} />
+            <Route exact path="/m8d/reviews/:_id" render={(props) => (<ReviewDetails {...props} />)} />
+            <Route exact path="/m8d/edit/:_id" render={(props) => (<Edit {...props} />)} />
+            <Route exact path="/m8d/create" component={Create} />
+            <Route path="/*" render={() => (<Redirect to="/m8d/browse" />)} />
           </Switch>
         </main>
       </div>

@@ -6,13 +6,15 @@ class DashBoardContainer extends Component {
     render() {
 
         let review = this.props.reviews.map((review, index) => {
-            let detailsPath = `/reviews/${review._id}`
+            let detailsPath = `/m8d/reviews/${review._id}`
             return (
                 <div className="card card-shadow m-3" key={index}>
                     <div className="card-body">
                         <div className="row">
                             <div className="col-md-3">
-                                <img src={review.imageUrl} height="100%" width="100%" className="img-fluid" alt={review.albumTitle}/>
+                                <Link to={detailsPath}>
+                                    <img src={review.imageUrl} height="100%" width="100%" className="img-fluid" alt={review.albumTitle} />
+                                </Link>
                             </div>
                             <div className="col-md-9">
                                 <Link to={detailsPath}><h2>{review.reviewTitle}</h2></Link>

@@ -46,7 +46,7 @@ class Edit extends Component {
         updateReview(this.state._id, this.state)
             .then((response) => {
                 console.log(response)
-                window.location.href = '/'
+                window.location.href = '/m8d/reviews'
             })
             .catch(err => console.log(err))
     }

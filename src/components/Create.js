@@ -27,7 +27,7 @@ class Create extends Component {
         createReview(this.state)
             .then((response) => {
                 console.log(response)
-                window.location.href = '/'
+                window.location.href = '/m8d/reviews'
             })
             .catch(err => console.log(err))
     }
