@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Results = (props) => {
     let album = props.albums.map((album, index) => {
-        let detailsPath = `/details/${album.id}`
+        let detailsPath = `/m8d/details/${album.id}`
         return (
             <div className="card card-results xy-shadow m-2" key={index}>
                 <div className="card-body">

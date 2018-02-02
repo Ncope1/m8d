@@ -30,7 +30,7 @@ class ReviewDetails extends Component {
         deleteReviewById(id)
             .then((response) => {
                 console.log(response)
-                window.location.href = '/'
+                window.location.href = '/m8d/reviews'
             })
     }
 
@@ -64,7 +64,7 @@ class ReviewDetails extends Component {
     }
 
     render() {
-        let editLink = `/edit/${this.state.review._id}`
+        let editLink = `/m8d/edit/${this.state.review._id}`
         let comment = this.state.comments.map((comment, index) => {
             return <Comment comment={comment} key={index} />
         })
