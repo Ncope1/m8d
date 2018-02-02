@@ -12,7 +12,7 @@ const Results = (props) => {
                             <img src={album.images[0].url} className="img-fluid" alt={album.name}/>
                         </div>
                         <div className="col-md-10">
-                            <Link className="card-title" to={detailsPath}><h4>{album.name}</h4></Link>
+                            <Link to={detailsPath}><h4 className="card-title">{album.name}</h4></Link>
                             {album.artists.map((artist, index) => {
                                 return <p className="text-muted" key={index}>{artist.name}</p>
                             })}
