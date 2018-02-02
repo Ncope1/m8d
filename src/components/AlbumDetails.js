@@ -41,14 +41,15 @@ class AlbumDetails extends Component {
         return (
             <div className="Details">
                 <div className="container">
+                    <h1>{this.state.album}</h1>
+                    <h4>{this.state.artist}</h4>
+                    <hr />
                     <div className="row">
-                        <div className="col-md-5 my-5">
-                            <h1>{this.state.album}</h1>
-                            <h4>{this.state.artist}</h4>
+                        <div className="col-md-5 my-1">
                             <img src={this.state.image} className="img-fluid xy-shadow" alt={this.state.album} />
                         </div>
-                        <div className="col-md-7 my-5">
-                            <div className="list-group xy-shadow">
+                        <div className="col-md-7 my-1">
+                            <div className="list-group track-list xy-shadow">
                                 {track}
                             </div>
                         </div>

@@ -47,7 +47,7 @@ class Browse extends Component {
                         <img src={album.images[0].url} className="img-fluid xy-shadow m-2" alt={album.name} />
                     </Link>
                 </div>
-        )
+            )
         })
         return (
             <div className="Dashboard">
