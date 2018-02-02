@@ -40,7 +40,7 @@ class Browse extends Component {
 
     render() {
         let album = this.state.albums.map((album, index) => {
-            let detailsPath = `/browse/details/${album.id}`
+            let detailsPath = `/m8d/browse/details/${album.id}`
             return (
                 <div className="col-md-4" key={index}>
                     <Link className="card-title" to={detailsPath}>

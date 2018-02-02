@@ -6,7 +6,7 @@ class Navbar extends Component {
         return (
             <div className="Navbar">
                 <nav className="navbar navbar-shadow navbar-dark fixed-top bg-dark">
-                    <Link to="/m8d/browse" className="navbar-brand">The Miseducation of 808s Dookie <i className="fas fa-comments"></i></Link>
+                    <Link to="/m8d/browse" className="navbar-brand">The Miseducation of 808s Dookie</Link>
                     <ul className="nav">
                         <li className="nav-item">
                             <NavLink exact={true} activeClassName="is-active" to="/m8d/browse" className="nav-link">Browse</NavLink>
