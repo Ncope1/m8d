@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const CLIENT_URL = 'http://localhost:3001/albums'
-// const CLIENT_URL = 'https://project-3-server-final.herokuapp.com/reviews'
+// const CLIENT_URL = 'http://localhost:3001/albums'
+const CLIENT_URL = 'https://project-3-server-final.herokuapp.com/albums'
 
 
 // SPOTIFY END POINTS
