@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { truncate } from 'truncate'
 import { CSSTransitionGroup } from 'react-transition-group'
 
 class DashBoardContainer extends Component {
@@ -8,7 +7,7 @@ class DashBoardContainer extends Component {
 
         let review = this.props.reviews.map((review, index) => {
             let detailsPath = `/m8d/reviews/${review._id}`
-            let reviewBody = review.reviewBody.substring(0, 350)
+            let reviewBody = review.reviewBody.substring(0, 400)
             return (
                 <div>
                     <div className="row" key={index}>
