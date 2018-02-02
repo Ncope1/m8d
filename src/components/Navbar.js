@@ -15,7 +15,7 @@ class Navbar extends Component {
                             <NavLink exact={true} activeClassName="is-active" to="/m8d/reviews" className="nav-link">Reviews</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink exact={true} activeClassName="is-active" to="/m8d/create" className="btn btn-light">Create Review</NavLink>
+                            <NavLink exact={true} to="/m8d/create" className="btn btn-light xy-shadow">Create Review</NavLink>
                         </li>
                     </ul>
                 </nav>
