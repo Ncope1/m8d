@@ -1,13 +1,34 @@
+// library imports
 import React, { Component } from 'react'
-import { createReview } from '../services/reviews'
 import { Link } from 'react-router-dom'
 
-class Create extends Component {
+// services
+import { getReviewById, updateReview } from '../../services/reviews'
+
+class EditForm extends Component {
+
     state = {
+        _id: '',
         reviewTitle: '',
         albumTitle: '',
+        comments: '',
         imageUrl: '',
         reviewBody: ''
+    }
+
+    componentWillMount() {
+        getReviewById(this.props.match.params._id)
+            .then((response) => {
+                this.setState({
+                    _id: response.data._id,
+                    reviewTitle: response.data.reviewTitle,
+                    albumTitle: response.data.albumTitle,
+                    comments: response.data.comments,
+                    imageUrl: response.data.imageUrl,
+                    reviewBody: response.data.reviewBody
+                })
+            })
+            .catch(err => console.log(err))
     }
 
     handleInput = (e) => {
@@ -23,22 +44,22 @@ class Create extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        // service call to Services/articles.js
-        createReview(this.state)
+        updateReview(this.state._id, this.state)
             .then((response) => {
-                console.log(response)
                 window.location.href = '/m8d/reviews'
             })
             .catch(err => console.log(err))
     }
 
+
     render() {
         return (
-            <div className="Create container">
-            <div className="card xy-shadow">
-            <div className="card-body">
-                        <h2 className="card-title">Add New Review</h2>
+            <div className="Edit">
+                <div className="card xy-shadow" >
+                    <div className="card-body">
+                        <h2 className="card-title">Edit: {this.state.reviewTitle}</h2>
                         <form onSubmit={this.handleSubmit}>
+
                             <div className="form-group">
                                 <label htmlFor="exampleFormControlInput1">Review Title</label>
                                 <input
@@ -50,6 +71,7 @@ class Create extends Component {
                                     onChange={this.handleInput}
                                 />
                             </div>
+
                             <div className="form-group">
                                 <label htmlFor="exampleFormControlInput1">Album Title</label>
                                 <input
@@ -61,6 +83,7 @@ class Create extends Component {
                                     onChange={this.handleInput}
                                 />
                             </div>
+
                             <div className="form-group">
                                 <label htmlFor="exampleFormControlInput1">Image Url</label>
                                 <input
@@ -72,7 +95,7 @@ class Create extends Component {
                                     onChange={this.handleInput}
                                 />
                             </div>
-                            
+
                             <div className="form-group">
                                 <label htmlFor="exampleFormControlInput1">Review</label>
                                 <textarea
@@ -82,18 +105,18 @@ class Create extends Component {
                                     name="reviewBody"
                                     value={this.state.reviewBody}
                                     onChange={this.handleInput}
-                                    >
+                                >
                                 </textarea>
                             </div>
 
-                            <button type="submit" className="btn btn-dark mx-1">Create</button>
-                            <Link to="/" className="btn btn-danger mx-1">Cancel</Link>
+                            <button type="submit" className="btn btn-dark mx-1">Update</button>
+                            <Link to="/m8d/reviews" className="btn btn-danger mx-1">Cancel</Link>
                         </form>
-                        </div>
-                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
 }
 
-export default Create
+export default EditForm

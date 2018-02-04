@@ -1,5 +1,8 @@
+// library imports
 import React, { Component } from 'react'
-import { getAlbumById } from '../services/albums'
+
+// service imports
+import { getAlbumById } from '../../services/albums'
 
 class AlbumDetails extends Component {
 
@@ -25,6 +28,7 @@ class AlbumDetails extends Component {
     }
 
     render() {
+
         let track = this.state.trackList.map((track, index) => {
             return (
                 <div key={index} className="list-group-item">
@@ -38,6 +42,7 @@ class AlbumDetails extends Component {
                 </div>
             )
         })
+        
         return (
             <div className="Details">
                 <div className="container">

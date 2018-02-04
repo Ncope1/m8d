@@ -1,9 +1,14 @@
+// library imports
 import React, { Component } from 'react'
-import SearchBar from './SearchBar'
-import { getAlbumByTitle, getNewReleases } from '../services/albums'
 import { Link } from 'react-router-dom'
 
-class Browse extends Component {
+// component imports
+import { SearchBar } from '../'
+
+// service imports
+import { getAlbumByTitle, getNewReleases } from '../../services/albums'
+
+class AlbumList extends Component {
     state = {
         query: '',
         albums: []
@@ -58,8 +63,8 @@ class Browse extends Component {
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default Browse
+export default AlbumList

@@ -1,3 +1,4 @@
+// library imports
 import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom'
 
@@ -9,7 +10,7 @@ class Navbar extends Component {
                     <Link to="/m8d/browse" className="navbar-brand">The Miseducation of 808s Dookie</Link>
                     <ul className="nav">
                         <li className="nav-item">
-                            <NavLink exact={true} activeClassName="is-active" to="/m8d/browse" className="nav-link">Browse</NavLink>
+                            <NavLink exact={true} activeClassName="is-active" to="/m8d/albums" className="nav-link">Browse</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink exact={true} activeClassName="is-active" to="/m8d/reviews" className="nav-link">Reviews</NavLink>
@@ -20,8 +21,8 @@ class Navbar extends Component {
                     </ul>
                 </nav>
             </div>
-        );
+        )
     }
 }
 
-export default Navbar;
+export default Navbar

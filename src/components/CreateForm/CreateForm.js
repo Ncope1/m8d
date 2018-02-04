@@ -1,33 +1,16 @@
-import React, { Component } from 'react';
-import { getReviewById, updateReview } from '../services/reviews'
+// library imports
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-class Edit extends Component {
+// service imports
+import { createReview } from '../../services/reviews'
 
+class CreateForm extends Component {
     state = {
-        _id: '',
         reviewTitle: '',
         albumTitle: '',
-        comments: '',
-        imageUrl:'',
-        reviewBody:''
-
-    }
-
-    componentDidMount() {
-        console.log(this.props.match.params._id)
-        getReviewById(this.props.match.params._id)
-            .then((response) => {
-                console.log(response)
-                this.setState({
-                    _id: response.data._id,
-                    reviewTitle: response.data.reviewTitle,
-                    albumTitle: response.data.albumTitle,
-                    comments: response.data.comments, 
-                    imageUrl: response.data.imageUrl,
-                    reviewBody:response.data.reviewBody
-                })
-            })
+        imageUrl: '',
+        reviewBody: ''
     }
 
     handleInput = (e) => {
@@ -43,7 +26,8 @@ class Edit extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        updateReview(this.state._id, this.state)
+        // service call to Services/articles.js
+        createReview(this.state)
             .then((response) => {
                 console.log(response)
                 window.location.href = '/m8d/reviews'
@@ -51,13 +35,12 @@ class Edit extends Component {
             .catch(err => console.log(err))
     }
 
-
     render() {
         return (
-            <div className="Edit">
-                <div className="card xy-shadow" >
-                    <div className="card-body">
-                        <h2 className="card-title">Edit: {this.state.reviewTitle}</h2>
+            <div className="Create container">
+            <div className="card xy-shadow">
+            <div className="card-body">
+                        <h2 className="card-title">Add New Review</h2>
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
                                 <label htmlFor="exampleFormControlInput1">Review Title</label>
@@ -92,7 +75,7 @@ class Edit extends Component {
                                     onChange={this.handleInput}
                                 />
                             </div>
-
+                            
                             <div className="form-group">
                                 <label htmlFor="exampleFormControlInput1">Review</label>
                                 <textarea
@@ -106,14 +89,14 @@ class Edit extends Component {
                                 </textarea>
                             </div>
 
-                            <button type="submit" className="btn btn-dark mx-1">Update</button>
+                            <button type="submit" className="btn btn-dark mx-1">Create</button>
                             <Link to="/" className="btn btn-danger mx-1">Cancel</Link>
                         </form>
-                    </div>
-                </div>
+                        </div>
+                        </div>
             </div>
-        );
+        )
     }
 }
 
-export default Edit;
+export default CreateForm

@@ -1,8 +1,13 @@
-import React, { Component } from 'react';
-import { getReviewById, deleteReviewById, createComment } from '../services/reviews'
+// library imports
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Comment from './Comment'
-import { generateName } from '../utilities/randomName'
+
+// component imports
+import { ReviewDetailsComment } from '../'
+
+// service imports
+import { getReviewById, deleteReviewById, createComment } from '../../services/reviews'
+import { generateName } from '../../utilities/randomName'
 
 class ReviewDetails extends Component {
 
@@ -10,7 +15,7 @@ class ReviewDetails extends Component {
         review: {},
         comments: [],
         comment: '',
-        author: 'ANONYMOUS'
+        author: ''
     }
 
     componentDidMount() {
@@ -66,7 +71,7 @@ class ReviewDetails extends Component {
     render() {
         let editLink = `/m8d/edit/${this.state.review._id}`
         let comment = this.state.comments.map((comment, index) => {
-            return <Comment comment={comment} key={index} />
+            return <ReviewDetailsComment comment={comment} key={index} />
         })
         return (
             <div className="ReviewDetails">
@@ -95,28 +100,28 @@ class ReviewDetails extends Component {
                     </div>
                 </div>
                 <div className="comments my-4">
-                <h4>Comments</h4>
-                <hr />
-                <div className="input-group xy-shadow mb-3">
-                    <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Add a comment..."
-                        aria-label="Comment"
-                        aria-describedby="basic-addon2"
-                        name="comment"
-                        value={this.state.comment}
-                        onChange={this.handleInput}
-                    />
-                    <div className="input-group-append">
-                        <button className="btn btn-dark" type="button" onClick={this.handleSubmit}>Post Comment</button>
+                    <h4>Comments</h4>
+                    <hr />
+                    <div className="input-group xy-shadow mb-3">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Add a comment..."
+                            aria-label="Comment"
+                            aria-describedby="basic-addon2"
+                            name="comment"
+                            value={this.state.comment}
+                            onChange={this.handleInput}
+                        />
+                        <div className="input-group-append">
+                            <button className="btn btn-dark" type="button" onClick={this.handleSubmit}>Post Comment</button>
+                        </div>
                     </div>
-                </div>
-                {comment}
+                    {comment}
                 </div>
             </div>
         )
     }
 }
 
-export default ReviewDetails;
+export default ReviewDetails

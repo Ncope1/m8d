@@ -1,6 +1,7 @@
+// library imports
 import React, { Component } from 'react';
 
-class Search extends Component {
+class SearchBar extends Component {
 
     // handle form submit
     onSubmitQuery = (e) => {
@@ -23,8 +24,8 @@ class Search extends Component {
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default Search;
+export default SearchBar
