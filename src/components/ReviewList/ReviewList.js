@@ -46,7 +46,7 @@ class ReviewList extends Component {
         })
 
         return (
-            <div className="DashboardContainer">
+            <div className="ReviewList">
                 <CSSTransitionGroup
                     transitionName="example"
                     transitionEnterTimeout={500}

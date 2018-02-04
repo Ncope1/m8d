@@ -53,9 +53,9 @@ class AlbumList extends Component {
                 </div>
             )
         })
-        
+
         return (
-            <div className="Dashboard">
+            <div className="AlbumList">
                 <SearchBar onSubmitQuery={this.onSubmitQuery} handleSearchInput={this.handleSearchInput} query={this.state.query} />
                 <div className="results-list">
                     <div className="row">

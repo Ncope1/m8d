@@ -35,7 +35,7 @@ class CreateForm extends Component {
 
     render() {
         return (
-            <div className="Create container">
+            <div className="CreateForm container">
             <div className="card xy-shadow">
             <div className="card-body">
                         <h2 className="card-title">Add New Review</h2>

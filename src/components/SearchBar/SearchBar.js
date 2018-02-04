@@ -16,7 +16,7 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div className="Search my-3">
+            <div className="SearchBar my-3">
                 <div className="input-group xy-shadow">
                     <input type="text" className="form-control" placeholder="Search for an Album" name="query" value={this.props.query} onChange={this.handleSearchInput} />
                     <div className="input-group-append">

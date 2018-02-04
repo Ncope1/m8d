@@ -54,7 +54,7 @@ class EditForm extends Component {
 
     render() {
         return (
-            <div className="Edit">
+            <div className="EditForm">
                 <div className="card xy-shadow" >
                     <div className="card-body">
                         <h2 className="card-title">Edit: {this.state.reviewTitle}</h2>

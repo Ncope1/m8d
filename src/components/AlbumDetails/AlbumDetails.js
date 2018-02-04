@@ -43,7 +43,7 @@ class AlbumDetails extends Component {
         })
         
         return (
-            <div className="Details">
+            <div className="AlbumDetails">
                 <div className="container">
                     <h1>{this.state.album}</h1>
                     <h4>{this.state.artist}</h4>
