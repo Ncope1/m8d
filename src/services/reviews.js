@@ -4,7 +4,6 @@ import axios from 'axios'
 const CLIENT_URL = 'https://project-3-server-final.herokuapp.com/reviews'
 
 
-// get all albums
 export const getAllReviews = () => {
     return axios.get(`${CLIENT_URL}/`)
 }
