@@ -14,10 +14,9 @@ class AlbumDetails extends Component {
         trackList: []
     }
 
-    componentDidMount() {
+    componentWillMount() {
         getAlbumById(this.props.match.params.id)
             .then((response) => {
-                console.log(response)
                 this.setState({
                     album: response.data.name,
                     artist: response.data.artists[0].name,

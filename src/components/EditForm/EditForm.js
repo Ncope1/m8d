@@ -33,9 +33,9 @@ class EditForm extends Component {
 
     handleInput = (e) => {
         // per official react docs
-        const target = e.target;
-        const value = target.value;
-        const name = target.name;
+        const target = e.target
+        const value = target.value
+        const name = target.name
 
         this.setState({
             [name]: value

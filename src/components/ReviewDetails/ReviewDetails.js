@@ -18,32 +18,28 @@ class ReviewDetails extends Component {
         author: ''
     }
 
-    componentDidMount() {
-        console.log(this.props.match.params._id)
+    componentWillMount() {
         getReviewById(this.props.match.params._id)
             .then((response) => {
-                // console.log(response)
                 this.setState({
                     review: response.data,
                     comments: response.data.comments
                 })
-                console.log(this.state.review)
             })
     }
 
     deleteReviewById = (id) => {
         deleteReviewById(id)
             .then((response) => {
-                console.log(response)
                 window.location.href = '/m8d/reviews'
             })
     }
 
     handleInput = (e) => {
         // per official react docs
-        const target = e.target;
-        const value = target.value;
-        const name = target.name;
+        const target = e.target
+        const value = target.value
+        const name = target.name
 
         this.setState({
             [name]: value
@@ -56,10 +52,8 @@ class ReviewDetails extends Component {
             comment: this.state.comment,
             author: generateName()
         }
-        // service call to Services/articles.js
         createComment(this.state.review._id, post)
             .then((response) => {
-                console.log(response)
                 this.setState({
                     comments: response.data.comments
                 })

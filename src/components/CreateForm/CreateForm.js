@@ -15,9 +15,9 @@ class CreateForm extends Component {
 
     handleInput = (e) => {
         // per official react docs
-        const target = e.target;
-        const value = target.value;
-        const name = target.name;
+        const target = e.target
+        const value = target.value
+        const name = target.name
 
         this.setState({
             [name]: value
@@ -26,10 +26,8 @@ class CreateForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        // service call to Services/articles.js
         createReview(this.state)
             .then((response) => {
-                console.log(response)
                 window.location.href = '/m8d/reviews'
             })
             .catch(err => console.log(err))

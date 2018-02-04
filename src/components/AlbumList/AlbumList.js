@@ -15,13 +15,12 @@ class AlbumList extends Component {
     }
 
     // on mount populate list
-    componentDidMount() {
+    componentWillMount() {
         getNewReleases()
             .then((response) => {
                 this.setState({
                     albums: response.data.albums.items,
                 })
-                console.log(this.state.albums)
             })
     }
 
@@ -32,7 +31,6 @@ class AlbumList extends Component {
                 this.setState({
                     albums: response.data,
                 })
-                console.log(this.state.albums)
             })
     }
 
@@ -44,8 +42,9 @@ class AlbumList extends Component {
     }
 
     render() {
+
         let album = this.state.albums.map((album, index) => {
-            let detailsPath = `/m8d/browse/details/${album.id}`
+            let detailsPath = `/m8d/albums/${album.id}`
             return (
                 <div className="col-md-4" key={index}>
                     <Link className="card-title" to={detailsPath}>
@@ -54,6 +53,7 @@ class AlbumList extends Component {
                 </div>
             )
         })
+        
         return (
             <div className="Dashboard">
                 <SearchBar onSubmitQuery={this.onSubmitQuery} handleSearchInput={this.handleSearchInput} query={this.state.query} />
