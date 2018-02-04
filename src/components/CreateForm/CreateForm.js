@@ -88,7 +88,7 @@ class CreateForm extends Component {
                             </div>
 
                             <button type="submit" className="btn btn-dark mx-1">Create</button>
-                            <Link to="/" className="btn btn-danger mx-1">Cancel</Link>
+                            <Link to="/m8d/reviews" className="btn btn-danger mx-1">Cancel</Link>
                         </form>
                         </div>
                         </div>

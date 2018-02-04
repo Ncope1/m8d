@@ -1,3 +1,5 @@
+/* core styles */
+/*****************/
 body {
     padding-top: 4.5rem;
     font-family: 'Open Sans', sans-serif;
@@ -7,9 +9,11 @@ main {
     margin-top: 1em;
 }
 
+/* navbar styles */
+/*****************/
 .navbar-brand {
-    font-size: 26px;
-    font-family: 'Rammetto One', cursive;
+  font-size: 26px;
+  font-family: 'Rammetto One', cursive;
 }
 
 .nav-link {
@@ -17,72 +21,80 @@ main {
 }
 
 .is-active {
-  color: #fff
+  color: #fff;
 }
 
 .navbar-shadow {
-    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
 }
 
+
+/* drop shadows */
+/*****************/
 .xy-shadow {
-    -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
-    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
-  }
-
-.card {
-    border-radius: 0;
-}
-
-.card-title {
-    color: #0b0000;
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
+  box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
 }
 
 .card-shadow {
-    -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
-    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
+  box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
 }
 
+/* card styles */
+/*****************/
+.card {
+  border-radius: 0;
+}
+
+.card-title {
+  color: #0b0000;
+}
+
+/* button styles */
+/*****************/
 .btn {
     border-radius: 0;
 }
 
-.example-enter {
-    opacity: 0.01;
-  }
-  
-  .example-enter.example-enter-active {
-    opacity: 1;
-    transition: opacity 500ms ease-in;
-  }
-  
-  .example-leave {
-    opacity: 1;
-  }
-  
-  .example-leave.example-leave-active {
-    opacity: 0.01;
-    transition: opacity 300ms ease-in;
-  }
+/* form input styles */
+/*****************/
+.form-control {
+  border-radius: 0;
+}
 
-
+/* overflow-y scrolls */
+/*****************/
 .results-list {
-    overflow-y: scroll;
-    height: calc(100vh - 160px)
-  }
+  overflow-y: scroll;
+  height: calc(100vh - 160px)
+}
 
-  .jumbotron {
-    border-radius: 0;
-  }
+.track-list  {
+  overflow-y: scroll;
+  height: calc(100vh - 245px)
+}
+
+/* CSS Transition Group Styles */
+/*****************/
+.example-enter {
+  opacity: 0.01;
+}
   
-  .form-control {
-    border-radius: 0;
-  }
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
 
-  .track-list  {
-    overflow-y: scroll;
-    height: calc(100vh - 245px)
-  }
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
