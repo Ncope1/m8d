@@ -22,6 +22,7 @@ class AlbumList extends Component {
                     albums: response.data.albums.items,
                 })
             })
+            .catch(err => console.log(err))
     }
 
     // handle query submit from child component
@@ -32,6 +33,7 @@ class AlbumList extends Component {
                     albums: response.data,
                 })
             })
+            .catch(err => console.log(err))
     }
 
     // handle search input from child component

@@ -24,6 +24,7 @@ class AlbumDetails extends Component {
                     trackList: response.data.tracks.items
                 })
             })
+            .catch(err => console.log(err))
     }
 
     render() {
