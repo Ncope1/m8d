@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
+    "client-sessions": "^0.8.0",
     "gh-pages": "^1.1.0",
     "react": "^16.2.0",
+    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.0",
