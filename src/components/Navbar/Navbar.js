@@ -1,8 +1,8 @@
 // library imports
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom'
-import {Button} from 'react-bootstrap'
-import SignIn from './SignIn';
+import SignUp from '../SignUp/SignUp';
+import { Button } from 'reactstrap';
 
 const Navbar = () => {
     return (
@@ -20,8 +20,9 @@ const Navbar = () => {
                         <NavLink exact={true} to="/m8d/create" className="btn btn-light xy-shadow">Create Review</NavLink>
                     </li>
                     <li className="nav-item">
-                    <SignIn/>            
+                        <SignUp />
                     </li>
+                              
                 </ul>
             </nav>
         </div>
