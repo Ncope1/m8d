@@ -24,9 +24,9 @@ class SignUp extends React.Component {
   google_signin() {
     google_signin()
     .then(resp => {
-      console.log(resp);
+      // console.log(resp);
       let { displayName, email, uid } = resp.user;
-      console.log(this);
+      // console.log(this);
       this.setState({ online: true });
     })
     .catch(error => { console.log(error) })
@@ -34,7 +34,7 @@ class SignUp extends React.Component {
   google_signout() {
     google_signOut()
     .then(resp => {
-      console.log(resp);
+      // console.log(resp);
       this.setState({ online: false });
     })
     .catch(error => { console.log(error) })
@@ -42,7 +42,7 @@ class SignUp extends React.Component {
 
   render() {
     let user = check_session();
-    console.log("session: ", user);
+    // console.log("session: ", user);
     return (
       <div>
         { user != null && 
