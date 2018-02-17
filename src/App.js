@@ -10,7 +10,8 @@ import {
   EditForm,
   Navbar,
   ReviewDetails,
-  ReviewList
+  ReviewList,
+  SignUp
 } from './components/'
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
             <Route exact path="/m8d/reviews/:_id" render={(props) => (<ReviewDetails {...props} />)} />
             <Route exact path="/m8d/edit/:_id" render={(props) => (<EditForm {...props} />)} />
             <Route exact path="/m8d/create" component={CreateForm} />
+            <Route exact path="/m8d/signup" component={SignUp} />
             <Route path="/*" render={() => (<Redirect to="/m8d/albums" />)} />
           </Switch>
         </main>
